@@ -39,8 +39,8 @@ def updatePdfToc(filename, input_file, shift, remove, output):
                     continue
                     
                 remainingLine = line[count:].lstrip().rstrip()
-                remainingLineParts = remainingLine.split(',')
-                
+                remainingLineParts = remainingLine.split('|')
+                print(remainingLineParts)
                 toc.append([count,remainingLineParts[0].lstrip().rstrip()
                 ,int(remainingLineParts[1])+shift])
         
