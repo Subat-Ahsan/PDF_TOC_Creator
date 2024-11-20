@@ -62,7 +62,7 @@ def writeInputData(filename, output_file):
     with open(output_file, 'w' , encoding='utf-8') as file:
         toc = pdf_reader.get_toc()
         for i in toc:
-            outline_string = '>'*i[0] + i[1]+','+str(i[2]) +'\n'
+            outline_string = '>'*i[0] + i[1]+'|'+str(i[2]) +'\n'
             file.write(outline_string)
             
 if __name__ == "__main__":
